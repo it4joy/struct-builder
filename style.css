@@ -18,6 +18,10 @@ body {
   outline: none;
 }
 
+.tree-wrapper {
+  padding: 0px;
+}
+
 .tree-item {
   display: flex;
   justify-content: space-between;
