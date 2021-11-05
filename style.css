@@ -1,0 +1,60 @@
+html {
+  font-size: 10px;
+  color: #666;
+}
+
+body {
+  background-color: #eee;
+}
+
+.form-field {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1.4rem;
+}
+.form-field:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.tree-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 315px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.tree-item.child-item {
+  margin-left: 50px;
+}
+
+.tree-item .form-field {
+  margin-left: 20px;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-actions i {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+.item-actions i:last-child {
+  margin-right: 0px;
+}
+.item-actions i:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.item-priority {
+  color: #eee;
+}
