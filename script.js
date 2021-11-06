@@ -31,6 +31,7 @@ const setMarkup = (wrapper, isChild = false) => {
 $(document).ready( () => {
   const treeWrapper = $('.tree-wrapper');
 
+  // init
   setMarkup(treeWrapper);
 
   treeWrapper.on( 'click', (e) => {
@@ -38,11 +39,8 @@ $(document).ready( () => {
     
     // add
     if ( target.hasClass('add-item') ) {
-      if ( target.parents('ul').hasClass('child-ul') ) {
-       setMarkup(treeWrapper, true);
-      } else {
-        setMarkup(treeWrapper);
-      }
+      const wrapper = target.closest('ul');
+      setMarkup(wrapper);
     }
 
     // rm
@@ -53,9 +51,8 @@ $(document).ready( () => {
 
     // add a child
     if ( target.hasClass('add-child-item') ) {
-      isChild = true;
-      setMarkup(treeWrapper, true);
-      isChild = false;
+      const wrapper = target.closest('ul');
+      setMarkup(wrapper, true);
     }
   } );
 } );
