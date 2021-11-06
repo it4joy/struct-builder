@@ -55,4 +55,9 @@ $(document).ready( () => {
       setMarkup(wrapper, true);
     }
   } );
+
+  // test of Class of localStorage handler
+  const locStorageHandler = new LocStorageHandler();
+  locStorageHandler.set('key', {test: 'test'});
+  locStorageHandler.get('key');
 } );
