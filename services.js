@@ -1,7 +1,6 @@
 class LocStorageHandler {
   constructor() {
     this.ls = window.localStorage;
-    //console.log( typeof this.ls );
   }
 
   has(key) {
@@ -25,16 +24,6 @@ class LocStorageHandler {
   
   // test ...
   set(key, val) {
-    /*
-    if ( this.ls ) {
-      const ls = this.ls;
-      if ( ! ls.has(key) ) {
-        const item = JSON.stringify(val);
-        ls.setItem(key, item);
-      }
-    }
-    */
-
     const ls = this.ls;
     
     if ( ! this.has(key) ) {
@@ -44,8 +33,10 @@ class LocStorageHandler {
   }
 
   rm(key) {
-    if ( this.ls.has(key) ) {
-      this.ls.removeItem(key);
+    const ls = this.ls;
+
+    if ( this.has(key) ) {
+      ls.removeItem(key);
     }
   }
 }
