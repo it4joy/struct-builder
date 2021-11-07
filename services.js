@@ -40,3 +40,7 @@ class LocStorageHandler {
     }
   }
 }
+
+class Modal {
+  
+}
