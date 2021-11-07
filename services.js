@@ -44,3 +44,12 @@ class LocStorageHandler {
 class Modal {
   
 }
+
+$('.btn-modal-close').on( 'click', (e) => {
+  const target = $(e.target);
+
+  if ( target.hasClass('btn-modal-close') ) {
+    console.log(target.attr('class'));
+    target.parents('.overlay').toggleClass('d-none');
+  }
+} );

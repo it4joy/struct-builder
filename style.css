@@ -14,6 +14,10 @@ body {
   background-color: #eee;
 }
 
+.d-none {
+  display: none;
+}
+
 .form-field {
   padding: 6px;
   border: 1px solid #ddd;
@@ -44,8 +48,8 @@ body {
   margin-left: 50px;
 }
 
-.tree-item .form-field {
-  margin-left: 20px;
+.tree-item .item-priority {
+  margin-right: 10px;
 }
 
 .item-actions {
