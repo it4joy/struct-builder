@@ -59,6 +59,5 @@ $(document).ready( () => {
   // test of Class of localStorage handler
   const locStorageHandler = new LocStorageHandler();
   locStorageHandler.set('key', {test: 777});
-  locStorageHandler.get('key');
   //locStorageHandler.rm('key');
 } );
