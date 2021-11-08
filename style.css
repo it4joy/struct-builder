@@ -10,6 +10,8 @@ html {
 
 body {
   position: relative;
+  margin: 0px;
+  padding: 10px;
   height: inherit;
   background-color: #eee;
 }
@@ -30,6 +32,7 @@ body {
 }
 
 .tree-wrapper {
+  margin: 0px;
   padding: 0px;
 }
 
