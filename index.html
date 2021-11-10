@@ -9,19 +9,20 @@
   </head>
   <body>
     <ul class="tree-wrapper"></ul>
-    <div class="overlay">
-      <div class="modal">
-        <i class="fas fa-times btn-modal-close"></i>
-        <div class="modal-head">
-          Test Heading
-        </div>
-        <div class="modal-body">
-          <p>Test...</p>
-        </div>
-      </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="services.js"></script>
-    <script src="script.js"></script>
+    <script src="loc-storage-handler.js"></script>
+    <script src="modal.js"></script>
+    <script src="builder.js"></script>
+    <script>
+      $(document).ready( () => {
+        const $treeWrapper = $('.tree-wrapper');
+        const $overlay = $('.overlay');
+
+        const builderInst = new Builder({
+          parent: $treeWrapper,
+          doc: document
+        });
+      } );
+    </script>
   </body>
 </html>

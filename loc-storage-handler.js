@@ -36,17 +36,3 @@ class LocStorageHandler {
     }
   }
 }
-
-
-class Modal {
-  
-}
-
-// N: mv into class
-$('.btn-modal-close').on( 'click', (e) => {
-  const target = $(e.target);
-
-  if ( target.hasClass('btn-modal-close') ) {
-    target.parents('.overlay').toggleClass('d-none');
-  }
-} );
