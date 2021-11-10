@@ -1,7 +1,6 @@
 class Builder {
   constructor(opts) {
     this.parent = opts.parent;
-    this.doc = opts.doc;
     this.setMarkup(this.parent);
     this.initModal(this.parent);
 
@@ -9,9 +8,6 @@ class Builder {
 
     this.parent.on( 'click', (e) => {
       const target = $(e.target);
-      /*
-        N: wrapper => parent
-      */
     
       // add
       if ( target.hasClass('add-item') ) {
@@ -33,12 +29,12 @@ class Builder {
 
       // show a modal with info
       if ( target.hasClass('open-item-settings') ) {
-        that.showModal(this.doc);
+        that.showModal(document);
       }
     } );
   }
 
-  static modal = new Modal(this.doc);
+  static modal = new Modal();
   static childUl = '<ul class="child-ul">';
   static li = `
     <li class="tree-item">
